@@ -31,7 +31,7 @@ public class HomeFragment extends Fragment {
 
         ArrayList<CardViewComponent> cardViewComponents = new ArrayList<>();
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_nutrition), getResources().getDrawable(R.drawable.ic_nutrition, null), requireActivity(), new NutritionFragment()));
-        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_activities), getResources().getDrawable(R.drawable.ic_activities, null), requireActivity(), new TrainingsFragment()));
+        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_training), getResources().getDrawable(R.drawable.ic_activities, null), requireActivity(), new TrainingsFragment()));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_medicines), getResources().getDrawable(R.drawable.ic_medicines, null), requireActivity(), new MedicinesFragment()));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_sleep), getResources().getDrawable(R.drawable.ic_sleep, null), requireActivity(), new SleepFragment()));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_insurances), getResources().getDrawable(R.drawable.ic_insurances, null), requireActivity(), new InsurancesFragment()));
