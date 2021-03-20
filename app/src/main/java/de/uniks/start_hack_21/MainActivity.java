@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -61,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
         ft.commit();
     }
 
-    public void changeToDashboard(Fragment fragment) {
+    public void changeToDashboard(Fragment fragment, String suggestionText) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        DashboardFragment dashboardFragment = new DashboardFragment();
+        DashboardFragment dashboardFragment = new DashboardFragment(suggestionText);
         ft.replace(R.id.host_fragment_container, dashboardFragment);
         ft.addToBackStack(null);
         ft.commit();

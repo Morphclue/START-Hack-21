@@ -7,7 +7,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_activities">Activities</string>
+    <string name="menu_training">Training</string>
     <string name="menu_nutrition">Nutrition</string>
     <string name="menu_sleep">Sleep</string>
     <string name="menu_profile">Profile</string>
@@ -52,5 +52,15 @@
     <string name="last_week">Last Week</string>
     <string name="current_week">Current Week</string>
     <string name="today">Today</string>
+    <string name="activities">Activities</string>
+    <string name="footsteps">Footsteps</string>
+    <string name="steps">Steps</string>
+    <string name="general">General</string>
+    <string name="bee_florian">Bee_Florian</string>
+    <string name="level_7">Level 7</string>
+
+    <!-- Profile -->
+    <string name="friends_name">Name</string>
+    <string name="friends_level">Lvl</string>
 
 </resources>

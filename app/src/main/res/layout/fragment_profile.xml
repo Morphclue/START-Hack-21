@@ -17,13 +17,13 @@
         <LinearLayout
             android:id="@+id/container_overview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:orientation="vertical">
 
@@ -31,6 +31,8 @@
                     android:id="@+id/last_week_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center"
                     android:padding="8dp"
                     android:text="@string/last_week"
@@ -40,12 +42,15 @@
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/pieChart_view_first"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="140dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:orientation="vertical">
 
@@ -53,21 +58,28 @@
                     android:id="@+id/current_week_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
                     android:gravity="center"
                     android:padding="8dp"
                     android:text="@string/current_week"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/pieChart_view_second"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="8dp" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:orientation="vertical">
 
@@ -75,6 +87,8 @@
                     android:id="@+id/today_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center"
                     android:padding="8dp"
                     android:text="@string/today"
@@ -84,44 +98,51 @@
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/pieChart_view_third"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp" />
+
             </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/container_history"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.25"
-            android:orientation="horizontal">
 
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/container_friends"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.25"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView3"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Florian 0" />
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Florian 1" />
+                <ImageView
+                    android:id="@+id/picture"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Florian 2" />
+                <TextView
+                    android:id="@+id/col_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/friends_name" />
+
+                <TextView
+                    android:id="@+id/text_friend_level"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/friends_level" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
         <ScrollView
