@@ -182,57 +182,57 @@
 	"sleep":[
 		{
 			"date":"2021-01-01T",
-			"minutes": 65,
-			"deepSleep": 80,
-			"lightSleep": 15,
+			"minutes": 300,
+			"deepSleep": 60,
+			"lightSleep": 240,
 			"turns":5,
 			"awake": 120
 		},
 		{
 			"date":"2021-01-02T",
-			"minutes": 65,
-			"deepSleep": 80,
-			"lightSleep": 15,
+			"minutes": 400,
+			"deepSleep": 50,
+			"lightSleep": 350,
 			"turns":5,
 			"awake": 120
 		},
 		{
 			"date":"2021-01-03T",
-			"minutes": 65,
-			"deepSleep": 80,
-			"lightSleep": 15,
+			"minutes": 360,
+			"deepSleep": 30,
+			"lightSleep": 330,
 			"turns":5,
 			"awake": 120
 		},
 		{
 			"date":"2021-01-04T",
-			"minutes": 65,
-			"deepSleep": 80,
-			"lightSleep": 15,
+			"minutes": 300,
+			"deepSleep": 66,
+			"lightSleep": 234,
 			"turns":5,
 			"awake": 120
 		},
 		{
 			"date":"2021-01-05T",
-			"minutes": 65,
-			"deepSleep": 80,
-			"lightSleep": 15,
+			"minutes": 160,
+			"deepSleep": 50,
+			"lightSleep": 110,
 			"turns":5,
 			"awake": 120
 		},
 		{
 			"date":"2021-01-06T",
-			"minutes": 65,
-			"deepSleep": 80,
-			"lightSleep": 15,
+			"minutes": 310,
+			"deepSleep": 100,
+			"lightSleep": 210,
 			"turns":5,
 			"awake": 120
 		},
 		{
 			"date":"2021-01-07T",
-			"minutes": 65,
+			"minutes": 240,
 			"deepSleep": 80,
-			"lightSleep": 15,
+			"lightSleep": 160,
 			"turns":5,
 			"awake": 120
 		}

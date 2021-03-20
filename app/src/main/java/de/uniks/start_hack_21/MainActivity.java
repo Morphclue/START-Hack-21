@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 import de.uniks.start_hack_21.data.User;
 import de.uniks.start_hack_21.ui.dashboard.DashboardFragment;
 import de.uniks.start_hack_21.ui.home.HomeFragment;
+import de.uniks.start_hack_21.util.UserManagement;
 import de.uniks.start_hack_21.util.Utils;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         User user = Utils.loadData(getApplicationContext());
+        UserManagement.setUser(user);
         changeFragment(new HomeFragment());
     }
 
