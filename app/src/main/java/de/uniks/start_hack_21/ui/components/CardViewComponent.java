@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 
 import de.uniks.start_hack_21.R;
 
@@ -28,7 +30,13 @@ public class CardViewComponent extends ConstraintLayout {
     public void setupCardView(View view){
         TextView textView = view.findViewById(R.id.text_view);
         ImageView imageView = view.findViewById(R.id.image_view);
+        CardView cardView = view.findViewById(R.id.main_card_view);
 
+        cardView.setOnClickListener(event -> {
+            System.out.println("HELLO");
+        });
+
+        cardView.setCardBackgroundColor(ContextCompat.getColor(getContext(), R.color.cardGoodColor));
         textView.setText(name);
         imageView.setImageDrawable(drawable);
     }

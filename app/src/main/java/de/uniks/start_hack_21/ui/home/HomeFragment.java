@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -38,10 +40,6 @@ public class HomeFragment extends Fragment {
 
         for (CardViewComponent component : cardViewComponents) {
             View view = inflater.inflate(R.layout.component_card_view, null);
-            CardView cardView = view.findViewById(R.id.main_card_view);
-            cardView.setOnClickListener(event -> {
-                System.out.println("HELLO");
-            });
 
             component.setupCardView(view);
             containerHome.addView(view);
