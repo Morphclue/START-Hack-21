@@ -56,5 +56,7 @@
     <string name="footsteps">Footsteps</string>
     <string name="steps">Steps</string>
     <string name="general">General</string>
+    <string name="bee_florian">Bee_Florian</string>
+    <string name="level_7">Level 7</string>
 
 </resources>
