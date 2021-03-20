@@ -7,9 +7,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import de.uniks.start_hack_21.data.User;
 import de.uniks.start_hack_21.ui.dashboard.DashboardFragment;
 import de.uniks.start_hack_21.ui.home.HomeFragment;
-
+import de.uniks.start_hack_21.util.Utils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        User user = Utils.loadData(getApplicationContext());
         changeFragment(new HomeFragment());
     }
 
