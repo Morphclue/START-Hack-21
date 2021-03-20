@@ -1,16 +1,16 @@
-package de.uniks.start_hack_21.ui.activities;
+package de.uniks.start_hack_21.ui.dashboard;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ActivitiesViewModel extends ViewModel {
+public class DashboardsViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public ActivitiesViewModel() {
+    public DashboardsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is activities fragment");
+        mText.setValue("This is the dashboard fragment");
     }
 
     public LiveData<String> getText() {
