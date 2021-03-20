@@ -1,4 +1,4 @@
-package de.uniks.start_hack_21.ui.activities;
+package de.uniks.start_hack_21.ui.dashboard.activities;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,14 +11,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import de.uniks.start_hack_21.R;
 
-public class ActivitiesFragment extends Fragment {
+public class DashboardFragment extends Fragment {
 
-    private ActivitiesViewModel activitiesViewModel;
+    private DashboardsViewModel dashboardsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        activitiesViewModel = new ViewModelProvider(this).get(ActivitiesViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_activities, container, false);
+        dashboardsViewModel = new ViewModelProvider(this).get(DashboardsViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
 
         return root;
