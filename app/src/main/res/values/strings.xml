@@ -14,4 +14,9 @@
     <string name="menu_medicines">Medicines</string>
     <string name="menu_overview">Health Overview</string>
     <string name="menu_insurances">Insurances</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="sampleText">SampleText</string>
+    <string name="graphs">Graphs</string>
+    <string name="todo">TODO</string>
 </resources>
