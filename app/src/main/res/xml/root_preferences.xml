@@ -1,73 +1,68 @@
-<PreferenceScreen
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory
-        app:title="@string/pref_view_header">
+    <PreferenceCategory app:title="@string/pref_view_header">
 
         <SwitchPreferenceCompat
             app:key="expert_view"
             app:title="@string/pref_expert_view"
             app:summaryOn="@string/pref_attachment_expert_on"
-            app:summaryOff="@string/pref_attachment_expert_off"/>
+            app:summaryOff="@string/pref_attachment_expert_off" />
 
         <SwitchPreferenceCompat
             app:key="dark_mode"
             app:title="@string/pref_dark_mode"
             app:summaryOn="@string/pref_attachment_dark_mode_on"
-            app:summaryOff="@string/pref_attachment_dark_mode_on"/>
+            app:summaryOff="@string/pref_attachment_dark_mode_on" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        app:title="@string/pref_tracking_header">
+    <PreferenceCategory app:title="@string/pref_tracking_header">
 
         <SwitchPreferenceCompat
             app:key="steps_tracking"
-            app:title="@string/pref_steps"/>
+            app:title="@string/pref_steps" />
 
         <SwitchPreferenceCompat
             app:key="sleep_tracking"
-            app:title="@string/pref_sleep"/>
+            app:title="@string/pref_sleep" />
 
         <SwitchPreferenceCompat
             app:key="pulse_tracking"
-            app:title="@string/pref_pulse"/>
+            app:title="@string/pref_pulse" />
 
         <SwitchPreferenceCompat
             app:key="blood_pressure_tracking"
-            app:title="@string/pref_pressure"/>
+            app:title="@string/pref_pressure" />
 
         <SwitchPreferenceCompat
             app:key="SpO2_tracking"
-            app:title="@string/pref_spo2"/>
+            app:title="@string/pref_spo2" />
 
 
         <SwitchPreferenceCompat
             app:key="weight_tracking"
-            app:title="@string/pref_weight"/>
+            app:title="@string/pref_weight" />
 
         <SwitchPreferenceCompat
             app:key="medication_tracking"
-            app:title="@string/pref_medication"/>
+            app:title="@string/pref_medication" />
 
         <SwitchPreferenceCompat
             app:key="nutrients_tracking"
-            app:title="@string/pref_nutrients"/>
+            app:title="@string/pref_nutrients" />
 
         <SwitchPreferenceCompat
             app:key="etc_tracking"
-            app:title="@string/pref_etc"/>
+            app:title="@string/pref_etc" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        app:title="@string/pref_account_header">
+    <PreferenceCategory app:title="@string/pref_account_header">
 
         <Preference
             app:title="@string/pref_create_account"
             app:key="create_account_button"
-            app:summary="@string/pref_create_account_summary"
-            />
+            app:summary="@string/pref_create_account_summary" />
 
     </PreferenceCategory>
 

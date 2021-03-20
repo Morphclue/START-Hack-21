@@ -1,4 +1,4 @@
-package de.uniks.start_hack_21.ui.dashboard.activities;
+package de.uniks.start_hack_21.ui.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

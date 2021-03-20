@@ -1,4 +1,4 @@
-package de.uniks.start_hack_21.ui.dashboard.activities;
+package de.uniks.start_hack_21.ui.dashboard;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
