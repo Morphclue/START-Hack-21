@@ -34,6 +34,15 @@
             app:title="@string/pref_pulse"/>
 
         <SwitchPreferenceCompat
+            app:key="blood_pressure_tracking"
+            app:title="@string/pref_pressure"/>
+
+        <SwitchPreferenceCompat
+            app:key="SpO2_tracking"
+            app:title="@string/pref_spo2"/>
+
+
+        <SwitchPreferenceCompat
             app:key="weight_tracking"
             app:title="@string/pref_weight"/>
 
