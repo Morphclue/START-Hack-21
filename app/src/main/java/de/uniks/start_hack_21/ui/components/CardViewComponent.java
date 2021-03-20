@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import de.uniks.start_hack_21.MainActivity;
 import de.uniks.start_hack_21.R;
+import de.uniks.start_hack_21.ui.profile.ProfileFragment;
 
 public class CardViewComponent extends ConstraintLayout {
     private String name;
@@ -36,8 +37,12 @@ public class CardViewComponent extends ConstraintLayout {
         CardView cardView = view.findViewById(R.id.main_card_view);
 
         cardView.setOnClickListener(event -> {
-            ((MainActivity) activity).changeToDashboard(nextFragment, suggestionText);
-            activity.setTitle(name);
+            if (nextFragment instanceof ProfileFragment) {
+                ((MainActivity) activity).changeFragment(nextFragment);
+            } else {
+                ((MainActivity) activity).changeToDashboard(nextFragment, suggestionText);
+                activity.setTitle(name);
+            }
         });
 
         cardView.setCardBackgroundColor(ContextCompat.getColor(getContext(), R.color.cardGoodColor));
