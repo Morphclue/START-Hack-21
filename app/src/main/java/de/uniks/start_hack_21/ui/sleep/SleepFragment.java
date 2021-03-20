@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
@@ -22,6 +23,9 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
@@ -38,6 +42,7 @@ public class SleepFragment extends Fragment {
     private SleepViewModel sleepViewModel;
     BarChart barChart;
 
+    @SuppressLint("ResourceType")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         sleepViewModel = new ViewModelProvider(this).get(SleepViewModel.class);
@@ -49,7 +54,34 @@ public class SleepFragment extends Fragment {
         initBarChart();
         showBarChart(user);
 
+        PieChart pieChart = root.findViewById(R.id.pieChart_view_first);
+        fillPieChart(pieChart, 64, getResources().getString(R.color.cardOkayColor));
+
         return root;
+    }
+
+    private void fillPieChart(PieChart pieChart, int percentage, String color) {
+        ArrayList<PieEntry> pieEntries = new ArrayList<>();
+        String label = "type";
+
+        ArrayList<Integer> colors = new ArrayList<>();
+        colors.add(Color.parseColor(color));
+        colors.add(Color.parseColor("#808080"));
+
+        String first = percentage + "%";
+        pieEntries.add(new PieEntry(percentage, first));
+        pieEntries.add(new PieEntry(100 -percentage));
+
+        PieDataSet pieDataSet = new PieDataSet(pieEntries, label);
+        pieDataSet.setValueTextSize(12f);
+        pieDataSet.setColors(colors);
+        PieData pieData = new PieData(pieDataSet);
+        pieData.setDrawValues(false);
+        pieChart.getLegend().setEnabled(false);
+        pieChart.getDescription().setEnabled(false);
+
+        pieChart.setData(pieData);
+        pieChart.invalidate();
     }
 
     private class barChartOnChartValueSelectedListener implements OnChartValueSelectedListener {
@@ -104,6 +136,8 @@ public class SleepFragment extends Fragment {
 
         initBarDataSet(barDataSet);
     }
+
+
 
     @SuppressLint("ResourceType")
     private void initBarDataSet(BarDataSet barDataSet){    //Changing the color of the bar
