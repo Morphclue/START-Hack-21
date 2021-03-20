@@ -1,0 +1,328 @@
+{
+
+	"name":"Florian",
+	"lastName": "Start",
+	"height":"180",
+	"age":"29",
+
+	"steps":[
+		{
+			"date":"2021-01-01T",
+			"steps": 10000
+		},
+		{
+			"date":"2021-01-02T",
+			"steps": 3000
+		},
+		{
+			"date":"2021-01-03T",
+			"steps": 7000
+		},
+		{
+			"date":"2021-01-04T",
+			"steps": 12000
+		},
+		{
+			"date":"2021-01-05T",
+			"steps": 15000
+		},
+		{
+			"date":"2021-01-06T",
+			"steps": 15000
+		},
+		{
+			"date":"2021-01-07T",
+			"steps": 15000
+		}
+	],
+	"pulse":[
+		{
+			"date":"2021-01-01T",
+			"pulseAverage": 65,
+			"percentLow": 80,
+			"percentMid": 15,
+			"percentHigh":5,
+			"max": 120,
+			"min": 50
+		},
+		{
+			"date":"2021-01-02T",
+			"pulseAverage": 65,
+			"percentLow": 80,
+			"percentMid": 15,
+			"percentHigh":5,
+			"max": 120,
+			"min": 50
+		},
+		{
+			"date":"2021-01-03T",
+			"pulseAverage": 65,
+			"percentLow": 80,
+			"percentMid": 15,
+			"percentHigh":5,
+			"max": 120,
+			"min": 50
+		},
+		{
+			"date":"2021-01-04T",
+			"pulseAverage": 65,
+			"percentLow": 80,
+			"percentMid": 15,
+			"percentHigh":5,
+			"max": 120,
+			"min": 50
+		},
+		{
+			"date":"2021-01-05T",
+			"pulseAverage": 65,
+			"percentLow": 80,
+			"percentMid": 15,
+			"percentHigh":5,
+			"max": 120,
+			"min": 50
+		},
+		{
+			"date":"2021-01-06T",
+			"pulseAverage": 65,
+			"percentLow": 80,
+			"percentMid": 15,
+			"percentHigh":5,
+			"max": 120,
+			"min": 50
+		},
+		{
+			"date":"2021-01-07T",
+			"pulseAverage": 65,
+			"percentLow": 80,
+			"percentMid": 15,
+			"percentHigh":5,
+			"max": 120,
+			"min": 50
+		}
+	],
+	"nutrition":[
+		{
+			"date":"2021-01-01T",
+			"calories": 65,
+			"fat": 80,
+			"carbs": 15,
+			"proteins":5,
+			"water": 120,
+			"alcohol": 50,
+			"caffeine": 50,
+			"nicotine": 50
+		},
+		{
+			"date":"2021-01-02T",
+			"calories": 65,
+			"fat": 80,
+			"carbs": 15,
+			"proteins":5,
+			"water": 120,
+			"alcohol": 50,
+			"caffeine": 50,
+			"nicotine": 50
+		},
+		{
+			"date":"2021-01-03T",
+			"calories": 65,
+			"fat": 80,
+			"carbs": 15,
+			"proteins":5,
+			"water": 120,
+			"alcohol": 50,
+			"caffeine": 50,
+			"nicotine": 50
+		},
+		{
+			"date":"2021-01-04T",
+			"calories": 65,
+			"fat": 80,
+			"carbs": 15,
+			"proteins":5,
+			"water": 120,
+			"alcohol": 50,
+			"caffeine": 50,
+			"nicotine": 50
+		},
+		{
+			"date":"2021-01-05T",
+			"calories": 65,
+			"fat": 80,
+			"carbs": 15,
+			"proteins":5,
+			"water": 120,
+			"alcohol": 50,
+			"caffeine": 50,
+			"nicotine": 50
+		},
+		{
+			"date":"2021-01-06T",
+			"calories": 65,
+			"fat": 80,
+			"carbs": 15,
+			"proteins":5,
+			"water": 120,
+			"alcohol": 50,
+			"caffeine": 50,
+			"nicotine": 50
+		},
+		{
+			"date":"2021-01-07T",
+			"calories": 65,
+			"fat": 80,
+			"carbs": 15,
+			"proteins":5,
+			"water": 120,
+			"alcohol": 50,
+			"caffeine": 50,
+			"nicotine": 50
+		}
+	],
+	"sleep":[
+		{
+			"date":"2021-01-01T",
+			"minutes": 65,
+			"deepSleep": 80,
+			"lightSleep": 15,
+			"turns":5,
+			"awake": 120
+		},
+		{
+			"date":"2021-01-02T",
+			"minutes": 65,
+			"deepSleep": 80,
+			"lightSleep": 15,
+			"turns":5,
+			"awake": 120
+		},
+		{
+			"date":"2021-01-03T",
+			"minutes": 65,
+			"deepSleep": 80,
+			"lightSleep": 15,
+			"turns":5,
+			"awake": 120
+		},
+		{
+			"date":"2021-01-04T",
+			"minutes": 65,
+			"deepSleep": 80,
+			"lightSleep": 15,
+			"turns":5,
+			"awake": 120
+		},
+		{
+			"date":"2021-01-05T",
+			"minutes": 65,
+			"deepSleep": 80,
+			"lightSleep": 15,
+			"turns":5,
+			"awake": 120
+		},
+		{
+			"date":"2021-01-06T",
+			"minutes": 65,
+			"deepSleep": 80,
+			"lightSleep": 15,
+			"turns":5,
+			"awake": 120
+		},
+		{
+			"date":"2021-01-07T",
+			"minutes": 65,
+			"deepSleep": 80,
+			"lightSleep": 15,
+			"turns":5,
+			"awake": 120
+		}
+	],
+	"weight":[
+		{
+			"date":"2021-01-01T",
+			"weight": 65
+		},
+		{
+			"date":"2021-01-02T",
+			"weight": 65
+		},
+		{
+			"date":"2021-01-03T",
+			"weight": 65
+		},
+		{
+			"date":"2021-01-04T",
+			"weight": 65
+		},
+		{
+			"date":"2021-01-05T",
+			"weight": 65
+		},
+		{
+			"date":"2021-01-06T",
+			"weight": 65
+		},
+		{
+			"date":"2021-01-07T",
+			"weight": 65
+		}
+	],
+	"scores":[
+		{
+			"date":"2021-01-01T",
+			"total_daily": 42,
+			"nutrients": 42,
+			"medication": 42,
+			"activity": 42,
+			"sleep": 42
+		},
+		{
+			"date":"2021-01-02T",
+			"total_daily": 42,
+			"nutrients": 42,
+			"medication": 42,
+			"activity": 42,
+			"sleep": 42
+		},
+		{
+			"date":"2021-01-03T",
+			"total_daily": 42,
+			"nutrients": 42,
+			"medication": 42,
+			"activity": 42,
+			"sleep": 42
+		},
+		{
+			"date":"2021-01-04T",
+			"total_daily": 42,
+			"nutrients": 42,
+			"medication": 42,
+			"activity": 42,
+			"sleep": 42
+		},
+		{
+			"date":"2021-01-05T",
+			"total_daily": 42,
+			"nutrients": 42,
+			"medication": 42,
+			"activity": 42,
+			"sleep": 42
+		},
+		{
+			"date":"2021-01-06T",
+			"total_daily": 42,
+			"nutrients": 42,
+			"medication": 42,
+			"activity": 42,
+			"sleep": 42
+		},
+		{
+			"date": "2021-01-07T",
+			"total_daily": 42,
+			"nutrients": 42,
+			"medication": 42,
+			"activity": 42,
+			"sleep": 42
+		}
+	]
+}
