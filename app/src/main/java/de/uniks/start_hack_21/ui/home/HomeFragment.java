@@ -38,7 +38,7 @@ public class HomeFragment extends Fragment {
                 new NutritionFragment(),
                 "Hey Florian! We already see that you are eating very well and healthy. " +
                         "Please check out the recipes we provided down below if you are searching " +
-                        "for inspiration. Otherwise: Keep up the good work champ!"));
+                        "for inspiration. Otherwise: Keep up the good work champ!", 2));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_training),
                 getResources().getDrawable(R.drawable.ic_activities, null),
                 requireActivity(),
@@ -46,7 +46,7 @@ public class HomeFragment extends Fragment {
                 "Peace Florian," +
                         "we see, that you are currently trying to gain that muscles. " +
                         "You could try challenging your friends to motivate you even more! " +
-                        "What about beating the other Florian in a swimming challenge?"));
+                        "What about beating the other Florian in a swimming challenge?", 2));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_medicines),
                 getResources().getDrawable(R.drawable.ic_medicines, null),
                 requireActivity(),
@@ -55,7 +55,7 @@ public class HomeFragment extends Fragment {
                         "We've found out that there might be a correlation between your" +
                         "headaches and your smoking habit. Try chewing a gum instead of smoking" +
                         "when the addiction kicks in. If that is too hard we advise you to call " +
-                        "42-42-1337 if you need help with that."));
+                        "42-42-1337 if you need help with that.", 0));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_sleep),
                 getResources().getDrawable(R.drawable.ic_sleep, null),
                 requireActivity(),
@@ -65,12 +65,12 @@ public class HomeFragment extends Fragment {
                         "We suggest to sleep at a regular time, even if that means less League " +
                         "of Legends for you... At least you got the chance to win those ranked games " +
                         ", because of the improved concentration from your new sleeping schedule! " +
-                        "Escape Elo-Hell!"));
+                        "Escape Elo-Hell!", 1));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_profile),
                 getResources().getDrawable(R.drawable.ic_profile, null),
                 requireActivity(),
                 new ProfileFragment(),
-                "-"));
+                "-", 3));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_insurances),
                 getResources().getDrawable(R.drawable.ic_insurances, null),
                 requireActivity(),
@@ -79,7 +79,7 @@ public class HomeFragment extends Fragment {
                         "dental insurance. Your teeth are a precious commodity that should " +
                         "definitely be valued. For this reason, we recommend that you participate" +
                         " in an additional insurance, as beautiful teeth do not get " +
-                        "healthier with age."));
+                        "healthier with age.", 3));
 
         LinearLayout leftContainerHome = root.findViewById(R.id.left_container_home);
         LinearLayout rightContainerHome = root.findViewById(R.id.right_container_home);
