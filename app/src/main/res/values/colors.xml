@@ -1,15 +1,15 @@
 <!--?xml version="1.0" encoding="UTF-8"?-->
 <resources>
-    <color name="primaryColor">#ffa726</color>
-    <color name="primaryLightColor">#ffd95b</color>
-    <color name="primaryDarkColor">#c77800</color>
-    <color name="secondaryColor">#607d8b</color>
-    <color name="secondaryLightColor">#8eacbb</color>
-    <color name="secondaryDarkColor">#34515e</color>
-    <color name="primaryTextColor">#000000</color>
-    <color name="secondaryTextColor">#000000</color>
-    <color name="cardBadColor">#ff8a84</color>
-    <color name="cardOkayColor">#eeae1b</color>
-    <color name="cardGoodColor">#7fe1ad</color>
+    <color name="primaryColor">#9a0941</color>
+    <color name="primaryLightColor">#d0486c</color>
+    <color name="primaryDarkColor">#65001b</color>
+    <color name="secondaryColor">#616161</color>
+    <color name="secondaryLightColor">#8e8e8e</color>
+    <color name="secondaryDarkColor">#373737</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
+    <color name="cardBadColor">#e53935</color>
+    <color name="cardOkayColor">#fdd835</color>
+    <color name="cardGoodColor">#43a047</color>
     <color name="cardInformationColor">#75a9f9</color>
 </resources>
