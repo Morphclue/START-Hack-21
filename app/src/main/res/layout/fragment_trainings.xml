@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.ActivitiesFragment">
+    tools:context=".ui.training.TrainingsFragment">
 
     <TextView
         android:id="@+id/text_gallery"
@@ -19,6 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="Activities Fragment"/>
+        android:text="Trainings Fragment"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
