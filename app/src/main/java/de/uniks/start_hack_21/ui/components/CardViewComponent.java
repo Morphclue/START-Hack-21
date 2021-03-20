@@ -19,13 +19,15 @@ public class CardViewComponent extends ConstraintLayout {
     private Drawable drawable;
     private FragmentActivity activity;
     private Fragment nextFragment;
+    private String suggestionText;
 
-    public CardViewComponent(String name, Drawable drawable, FragmentActivity activity, Fragment nextFragment) {
+    public CardViewComponent(String name, Drawable drawable, FragmentActivity activity, Fragment nextFragment, String suggestionText) {
         super(activity);
         this.name = name;
         this.drawable = drawable;
         this.activity = activity;
         this.nextFragment = nextFragment;
+        this.suggestionText = suggestionText;
     }
 
     public void setupCardView(View view) {
@@ -34,7 +36,7 @@ public class CardViewComponent extends ConstraintLayout {
         CardView cardView = view.findViewById(R.id.main_card_view);
 
         cardView.setOnClickListener(event -> {
-            ((MainActivity) activity).changeToDashboard(nextFragment);
+            ((MainActivity) activity).changeToDashboard(nextFragment, suggestionText);
             activity.setTitle(name);
         });
 

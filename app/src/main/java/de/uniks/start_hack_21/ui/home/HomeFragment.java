@@ -31,12 +31,55 @@ public class HomeFragment extends Fragment {
         final View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         ArrayList<CardViewComponent> cardViewComponents = new ArrayList<>();
-        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_nutrition), getResources().getDrawable(R.drawable.ic_nutrition, null), requireActivity(), new NutritionFragment()));
-        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_training), getResources().getDrawable(R.drawable.ic_activities, null), requireActivity(), new TrainingsFragment()));
-        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_medicines), getResources().getDrawable(R.drawable.ic_medicines, null), requireActivity(), new MedicinesFragment()));
-        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_sleep), getResources().getDrawable(R.drawable.ic_sleep, null), requireActivity(), new SleepFragment()));
-        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_profile), getResources().getDrawable(R.drawable.ic_profile, null), requireActivity(), new ProfileFragment()));
-        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_insurances), getResources().getDrawable(R.drawable.ic_insurances, null), requireActivity(), new InsurancesFragment()));
+        cardViewComponents.add(new CardViewComponent(
+                getString(R.string.menu_nutrition),
+                getResources().getDrawable(R.drawable.ic_nutrition, null),
+                requireActivity(),
+                new NutritionFragment(),
+                "Hey Florian! We already see that you are eating very well and healthy. " +
+                        "Please check out the recipes we provided down below if you are searching " +
+                        "for inspiration. Otherwise: Keep up the good work champ!"));
+        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_training),
+                getResources().getDrawable(R.drawable.ic_activities, null),
+                requireActivity(),
+                new TrainingsFragment(),
+                "Peace Florian," +
+                        "we see, that you are currently trying to gain that muscles. " +
+                        "You could try challenging your friends to motivate you even more! " +
+                        "What about beating the other Florian in a swimming challenge?"));
+        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_medicines),
+                getResources().getDrawable(R.drawable.ic_medicines, null),
+                requireActivity(),
+                new MedicinesFragment(),
+                "Bad News Florian!" +
+                        "We've found out that there might be a correlation between your" +
+                        "headaches and your smoking habit. Try chewing a gum instead of smoking" +
+                        "when the addiction kicks in. If that is too hard we advise you to call " +
+                        "42-42-1337 if you need help with that."));
+        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_sleep),
+                getResources().getDrawable(R.drawable.ic_sleep, null),
+                requireActivity(),
+                new SleepFragment(),
+                "Sleep is for the weak! Or isn't it? You would be quiet surprised " +
+                        "that sleeping well can make you feel stronger and more productive. " +
+                        "We suggest to sleep at a regular time, even if that means less League " +
+                        "of Legends for you... At least you got the chance to win those ranked games " +
+                        ", because of the improved concentration from your new sleeping schedule! " +
+                        "Escape Elo-Hell!"));
+        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_profile),
+                getResources().getDrawable(R.drawable.ic_profile, null),
+                requireActivity(),
+                new ProfileFragment(),
+                "-"));
+        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_insurances),
+                getResources().getDrawable(R.drawable.ic_insurances, null),
+                requireActivity(),
+                new InsurancesFragment(),
+                "Hey Florian. We noticed that you have not participated in any additional " +
+                        "dental insurance. Your teeth are a precious commodity that should " +
+                        "definitely be valued. For this reason, we recommend that you participate" +
+                        " in an additional insurance, as beautiful teeth do not get " +
+                        "healthier with age."));
 
         LinearLayout leftContainerHome = root.findViewById(R.id.left_container_home);
         LinearLayout rightContainerHome = root.findViewById(R.id.right_container_home);
