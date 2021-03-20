@@ -59,4 +59,8 @@
     <string name="bee_florian">Bee_Florian</string>
     <string name="level_7">Level 7</string>
 
+    <!-- Profile -->
+    <string name="friends_name">Name</string>
+    <string name="friends_level">Lvl</string>
+
 </resources>
