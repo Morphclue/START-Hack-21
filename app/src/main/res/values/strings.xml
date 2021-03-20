@@ -49,5 +49,8 @@
     <!-- Account Preferences -->
     <string name="pref_create_account">Create Account</string>
     <string name="pref_create_account_summary">Create an account to earn bonuses and compete with friends</string>
+    <string name="last_week">Last Week</string>
+    <string name="current_week">Current Week</string>
+    <string name="today">Today</string>
 
 </resources>

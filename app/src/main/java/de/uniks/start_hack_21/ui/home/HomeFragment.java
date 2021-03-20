@@ -17,6 +17,7 @@ import de.uniks.start_hack_21.ui.components.CardViewComponent;
 import de.uniks.start_hack_21.ui.insurances.InsurancesFragment;
 import de.uniks.start_hack_21.ui.medicines.MedicinesFragment;
 import de.uniks.start_hack_21.ui.nutrition.NutritionFragment;
+import de.uniks.start_hack_21.ui.profile.ProfileFragment;
 import de.uniks.start_hack_21.ui.sleep.SleepFragment;
 import de.uniks.start_hack_21.ui.training.TrainingsFragment;
 
@@ -34,6 +35,7 @@ public class HomeFragment extends Fragment {
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_training), getResources().getDrawable(R.drawable.ic_activities, null), requireActivity(), new TrainingsFragment()));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_medicines), getResources().getDrawable(R.drawable.ic_medicines, null), requireActivity(), new MedicinesFragment()));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_sleep), getResources().getDrawable(R.drawable.ic_sleep, null), requireActivity(), new SleepFragment()));
+        cardViewComponents.add(new CardViewComponent(getString(R.string.menu_profile), getResources().getDrawable(R.drawable.ic_profile, null), requireActivity(), new ProfileFragment()));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_insurances), getResources().getDrawable(R.drawable.ic_insurances, null), requireActivity(), new InsurancesFragment()));
 
         LinearLayout leftContainerHome = root.findViewById(R.id.left_container_home);
