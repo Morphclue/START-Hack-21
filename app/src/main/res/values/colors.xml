@@ -8,8 +8,8 @@
     <color name="secondaryDarkColor">#373737</color>
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#ffffff</color>
-    <color name="cardBadColor">#e53935</color>
-    <color name="cardOkayColor">#fdd835</color>
-    <color name="cardGoodColor">#43a047</color>
-    <color name="cardInformationColor">#75a9f9</color>
+    <color name="cardBadColor">#ff5d55</color>
+    <color name="cardOkayColor">#ffc957</color>
+    <color name="cardGoodColor">#92d36e</color>
+    <color name="cardInformationColor">#abb5be</color>
 </resources>
