@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         DashboardFragment dashboardFragment = new DashboardFragment();
         ft.replace(R.id.host_fragment_container, dashboardFragment);
+        ft.addToBackStack(null);
         ft.commit();
 
         FragmentTransaction nextTransaction = getSupportFragmentManager().beginTransaction();
