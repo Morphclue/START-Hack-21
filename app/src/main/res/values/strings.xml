@@ -14,4 +14,33 @@
     <string name="menu_medicines">Medicines</string>
     <string name="menu_overview">Health Overview</string>
     <string name="menu_insurances">Insurances</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="pref_view_header">View</string>
+    <string name="pref_tracking_header">Tracking</string>
+    <string name="pref_account_header">Account</string>
+
+    <!-- View Preferences -->
+    <string name="pref_expert_view">Expert View</string>
+    <string name="pref_attachment_expert_on">Shows only the basic overview for each category</string>
+    <string name="pref_attachment_expert_off">Shows advanced data for each category</string>
+    <string name="pref_dark_mode">Dark mode</string>
+    <string name="pref_attachment_dark_mode_on">Light mode</string>
+    <string name="pref_attachment_dark_mode_off">Dark mode</string>
+
+    <!-- Tracking Preferences -->
+    <string name="pref_steps">Steps</string>
+    <string name="pref_sleep">Sleep</string>
+    <string name="pref_pulse">Pulse</string>
+    <string name="pref_weight">Weight</string>
+    <string name="pref_medication">Medication</string>
+    <string name="pref_nutrients">Nutrients</string>
+    <string name="pref_etc">…</string>
+
+    <!-- Account Preferences -->
+    <string name="pref_create_account">Create Account</string>
+    <string name="pref_create_account_summary">Create an account to earn bonuses and compete with friends</string>
+
 </resources>
