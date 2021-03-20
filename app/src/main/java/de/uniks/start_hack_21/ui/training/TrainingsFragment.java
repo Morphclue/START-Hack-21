@@ -18,12 +18,20 @@ import de.uniks.start_hack_21.R;
 public class TrainingsFragment extends Fragment {
 
     private TrainingsViewModel trainingsViewModel;
+    private View root;
+    private LayoutInflater inflater;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         trainingsViewModel = new ViewModelProvider(this).get(TrainingsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_trainings, container, false);
+        this.inflater = inflater;
+        root = inflater.inflate(R.layout.fragment_trainings, container, false);
 
+        generateActivities();
+        return root;
+    }
+
+    private void generateActivities(){
         LinearLayout trainingContainer = root.findViewById(R.id.fragment_container_trainings);
         HashMap<String, String> nameTimeMap = new HashMap<>();
         nameTimeMap.put("Swimming", "20min");
@@ -41,7 +49,5 @@ public class TrainingsFragment extends Fragment {
 
             trainingContainer.addView(view);
         }
-
-        return root;
     }
 }
