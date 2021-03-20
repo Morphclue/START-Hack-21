@@ -12,7 +12,6 @@ import androidx.lifecycle.ViewModelProvider;
 
 import java.util.ArrayList;
 
-import de.uniks.start_hack_21.MainActivity;
 import de.uniks.start_hack_21.R;
 import de.uniks.start_hack_21.ui.components.CardViewComponent;
 import de.uniks.start_hack_21.ui.insurances.InsurancesFragment;
@@ -37,14 +36,21 @@ public class HomeFragment extends Fragment {
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_sleep), getResources().getDrawable(R.drawable.ic_sleep, null), requireActivity(), new SleepFragment()));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_insurances), getResources().getDrawable(R.drawable.ic_insurances, null), requireActivity(), new InsurancesFragment()));
 
-
-        LinearLayout containerHome = root.findViewById(R.id.container_home);
+        LinearLayout leftContainerHome = root.findViewById(R.id.left_container_home);
+        LinearLayout rightContainerHome = root.findViewById(R.id.right_container_home);
+        int i = 0;
 
         for (CardViewComponent component : cardViewComponents) {
             View view = inflater.inflate(R.layout.component_card_view, null);
 
             component.setupCardView(view);
-            containerHome.addView(view);
+
+            if (i % 2 == 0) {
+                leftContainerHome.addView(view);
+            } else {
+                rightContainerHome.addView(view);
+            }
+            i++;
         }
 
         return root;
