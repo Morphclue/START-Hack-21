@@ -6,132 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/container_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_nutrition"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                cardCornerRadius="4dp"
-                android:layout_gravity="center"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:backgroundTint="@color/primaryColor" >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/menu_nutrition"
-                    android:textSize="40dp"></TextView>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_activities"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                cardCornerRadius="4dp"
-                android:layout_gravity="center"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:backgroundTint="@color/primaryColor" >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/menu_activities"
-                    android:textSize="40dp"></TextView>
-
-            </androidx.cardview.widget.CardView>
-
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_medicines"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                cardCornerRadius="4dp"
-                android:layout_gravity="center"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:backgroundTint="@color/primaryColor" >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/menu_medicines"
-                    android:textSize="40dp"></TextView>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_sleep"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                cardCornerRadius="4dp"
-                android:layout_gravity="center"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:backgroundTint="@color/primaryColor" >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/menu_sleep"
-                    android:textSize="40dp"></TextView>
-
-            </androidx.cardview.widget.CardView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_insurances"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                cardCornerRadius="4dp"
-                android:layout_gravity="center"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:backgroundTint="@color/primaryColor" >
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/menu_insurances"
-                    android:textSize="40dp"></TextView>
-
-            </androidx.cardview.widget.CardView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"></LinearLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
