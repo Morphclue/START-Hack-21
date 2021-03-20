@@ -13,4 +13,5 @@
     <string name="menu_profile">Profile</string>
     <string name="menu_medicines">Medicines</string>
     <string name="menu_overview">Health Overview</string>
+    <string name="menu_insurances">Insurances</string>
 </resources>
