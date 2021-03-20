@@ -68,8 +68,9 @@
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/dashboard_fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+
         </androidx.fragment.app.FragmentContainerView>
 
     </LinearLayout>

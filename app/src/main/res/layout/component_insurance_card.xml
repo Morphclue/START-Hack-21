@@ -9,6 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
         android:background="@color/cardInformationColor"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent">
@@ -16,17 +18,19 @@
         <TextView
             android:id="@+id/text_insurance_card"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.45"
-            android:padding="8dp"
-            android:text="@string/sampleText"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:gravity="left"
+            android:textStyle="bold"
+            android:text="@string/sampleText" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/icon_insurance"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_check"
             />
 
     </LinearLayout>
