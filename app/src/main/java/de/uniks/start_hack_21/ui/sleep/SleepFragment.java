@@ -3,14 +3,12 @@ package de.uniks.start_hack_21.ui.sleep;
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.UserManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
@@ -19,15 +17,13 @@ import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
-//import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.highlight.Highlight;
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +43,6 @@ public class SleepFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_sleep, container, false);
 
         barChart = root.findViewById(R.id.sleep_bar_chart);
-        barChart.setOnChartValueSelectedListener(new barChartOnChartValueSelectedListener());
         User user = UserManagement.getUser();
         initBarChart();
         showBarChart(user);
@@ -80,20 +75,6 @@ public class SleepFragment extends Fragment {
 
         pieChart.setData(pieData);
         pieChart.invalidate();
-    }
-
-    private static class barChartOnChartValueSelectedListener implements OnChartValueSelectedListener {
-
-        @Override
-        public void onValueSelected(Entry e, Highlight h) {
-            //trigger activity when the bar value is selected
-
-        }
-
-        @Override
-        public void onNothingSelected() {
-
-        }
     }
 
     private void showBarChart(User user){
@@ -162,17 +143,15 @@ public class SleepFragment extends Fragment {
         barChart.animateX(1000);
 
         XAxis xAxis = barChart.getXAxis();
-        //change the position of x-axis to the bottom
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        //set the horizontal distance of the grid line
         xAxis.setGranularity(1f);
-        //hiding the x-axis line, default true if not set
         xAxis.setDrawAxisLine(false);
-        //hiding the vertical grid lines, default true if not set
         xAxis.setDrawGridLines(false);
 
+        final String[] weekdays = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(weekdays));
+
         YAxis leftAxis = barChart.getAxisLeft();
-        //hiding the left y-axis line, default true if not set
         leftAxis.setDrawAxisLine(false);
         leftAxis.setAxisMinimum(0f);
 
