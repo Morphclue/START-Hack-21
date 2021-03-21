@@ -65,6 +65,10 @@
     <string name="friends">Friends</string>
     <string name="score">Overall score</string>
 
+    <!-- Nutrition -->
+    <string name="nutrition">Nutrition Score Last 7 Days</string>
+    <string name="nutrition_today">Nutrition Today</string>
+
     <!-- Sleep -->
     <string name="sleeping_history">Sleeping time of last 7 days</string>
     <string name="sleep">Sleeping score</string>
