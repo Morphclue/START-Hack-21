@@ -73,4 +73,10 @@
     <string name="sleeping_history">Sleeping time of last 7 days</string>
     <string name="sleep">Sleeping score</string>
 
+    <!-- Meds -->
+    <string name="pills">Daily Pills</string>
+    <string name="disease">Diseases</string>
+
+
+
 </resources>

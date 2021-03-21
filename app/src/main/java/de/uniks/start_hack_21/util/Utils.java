@@ -35,7 +35,6 @@ public class Utils {
         String jsonFileString = getJsonFromAssets(context, "test_data.json");
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         User user = gson.fromJson(jsonFileString, User.class);
-        Log.i("data", '\n' + gson.toJson(user));
         return user;
     }
 
