@@ -47,19 +47,19 @@
                     android:layout_height="match_parent"
                     android:padding="8dp"
                     android:max="8000"
-                    android:progress="6000"
+                    android:progress="5842"
                     android:backgroundTint="@color/cardInformationColor"
-                    android:layout_weight="0.75"/>
+                    android:layout_weight="0.66"/>
 
                 <TextView
                     android:id="@+id/header_steps"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:padding="8dp"
-                    android:text="0/8000"
+                    android:text="5842/8000"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_weight="0.25"
+                    android:layout_weight="0.33"
                     />
             </LinearLayout>
 
