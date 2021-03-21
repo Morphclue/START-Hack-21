@@ -51,9 +51,9 @@ public class HomeFragment extends Fragment {
                 getResources().getDrawable(R.drawable.ic_medicines, null),
                 requireActivity(),
                 new MedicinesFragment(),
-                "Bad News Florian!" +
-                        "We've found out that there might be a correlation between your" +
-                        "headaches and your smoking habit. Try chewing a gum instead of smoking" +
+                "Bad News Florian! " +
+                        "We've found out that there might be a correlation between your " +
+                        "headaches and your smoking habit. Try chewing a gum instead of smoking " +
                         "when the addiction kicks in. If that is too hard we advise you to call " +
                         "42-42-1337 if you need help with that.", 0));
         cardViewComponents.add(new CardViewComponent(getString(R.string.menu_sleep),
