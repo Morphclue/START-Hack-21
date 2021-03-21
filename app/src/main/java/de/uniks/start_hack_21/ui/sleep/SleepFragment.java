@@ -39,13 +39,11 @@ import de.uniks.start_hack_21.util.UserManagement;
 
 public class SleepFragment extends Fragment {
 
-    private SleepViewModel sleepViewModel;
     BarChart barChart;
 
     @SuppressLint("ResourceType")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        sleepViewModel = new ViewModelProvider(this).get(SleepViewModel.class);
         View root = inflater.inflate(R.layout.fragment_sleep, container, false);
 
         barChart = root.findViewById(R.id.sleep_bar_chart);
@@ -84,7 +82,7 @@ public class SleepFragment extends Fragment {
         pieChart.invalidate();
     }
 
-    private class barChartOnChartValueSelectedListener implements OnChartValueSelectedListener {
+    private static class barChartOnChartValueSelectedListener implements OnChartValueSelectedListener {
 
         @Override
         public void onValueSelected(Entry e, Highlight h) {
@@ -99,17 +97,12 @@ public class SleepFragment extends Fragment {
     }
 
     private void showBarChart(User user){
-        ArrayList<Double> light_sleep_hours = new ArrayList<Double>();
-        ArrayList<Double> deep_sleep_hours = new ArrayList<Double>();
-        ArrayList<Double> sleep_hours = new ArrayList<Double>();
+        ArrayList<Double> light_sleep_hours = new ArrayList<>();
+        ArrayList<Double> deep_sleep_hours = new ArrayList<>();
+        ArrayList<Double> sleep_hours = new ArrayList<>();
         ArrayList<BarEntry> entries = new ArrayList<>();
 
         List<SleepData> sleep = user.getSleep();
-
-
-
-        String title = "Sleep Hours";
-        //fit the data into a bar
 
         for (SleepData single: sleep) {
             light_sleep_hours.add((double)single.getLightSleep()/60);
@@ -137,17 +130,12 @@ public class SleepFragment extends Fragment {
         initBarDataSet(barDataSet);
     }
 
-
-
     @SuppressLint("ResourceType")
     private void initBarDataSet(BarDataSet barDataSet){    //Changing the color of the bar
-//        barDataSet.setColors(Color.parseColor("#555555"), Color.parseColor("#111111"));
-
         barDataSet.setColors(Color.parseColor("#777777"),
                 Color.parseColor(getResources().getString(R.color.cardGoodColor)),
                 Color.parseColor(getResources().getString(R.color.cardOkayColor)),
                 Color.parseColor(getResources().getString(R.color.cardBadColor)));
-        //barDataSet.setColor(Color.parseColor("#304567"));    //Setting the size of the form in the legend
         barDataSet.setFormSize(15f);    //showing the value of the bar, default true if not set
         barDataSet.setDrawValues(false);    //setting the text size of the value of the bar
         barDataSet.setValueTextSize(12f);
@@ -208,7 +196,7 @@ public class SleepFragment extends Fragment {
 
     }
 
-    class MyBarDataSet extends BarDataSet {
+    private static class MyBarDataSet extends BarDataSet {
         List<Double> total;
         public MyBarDataSet(List<BarEntry> yVals, String label, List<Double> total) {
             super(yVals, label);
