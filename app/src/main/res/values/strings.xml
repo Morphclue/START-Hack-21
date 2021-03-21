@@ -62,5 +62,11 @@
     <!-- Profile -->
     <string name="friends_name">Name</string>
     <string name="friends_level">Lvl</string>
+    <string name="friends">Friends</string>
+    <string name="score">Overall score</string>
+
+    <!-- Sleep -->
+    <string name="sleeping_history">Sleeping time of last 7 days</string>
+    <string name="sleep">Sleeping score</string>
 
 </resources>
