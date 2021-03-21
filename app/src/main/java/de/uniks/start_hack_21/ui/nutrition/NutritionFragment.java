@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.CombinedChart;
@@ -18,14 +17,12 @@ import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
-//import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.CombinedData;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 
 import java.util.ArrayList;
@@ -34,16 +31,13 @@ import java.util.List;
 import de.uniks.start_hack_21.R;
 import de.uniks.start_hack_21.data.NutrientsData;
 import de.uniks.start_hack_21.data.User;
-import de.uniks.start_hack_21.ui.sleep.SleepFragment;
 import de.uniks.start_hack_21.util.UserManagement;
 
 public class NutritionFragment extends Fragment {
 
-    //private NutritionViewModel nutritionViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        //nutritionViewModel = new ViewModelProvider(this).get(NutritionViewModel.class);
         View root = inflater.inflate(R.layout.fragment_nutrition, container, false);
         User user = UserManagement.getUser();
 
@@ -72,12 +66,10 @@ public class NutritionFragment extends Fragment {
         l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
         l.setDrawInside(false);
 
-
         YAxis rightAxis = chart.getAxisRight();
         rightAxis.setEnabled(false);
 
         YAxis leftAxis = chart.getAxisLeft();
-//        leftAxis.setDrawGridLines(false);
         leftAxis.setAxisMinimum(0f); // this replaces setStartAtZero(true)
 
         final String[] nutrition_label = {"Fat", "Proteins", "Carbs"};
@@ -91,7 +83,6 @@ public class NutritionFragment extends Fragment {
 
         chart.setData(data);
         chart.invalidate();
-
 
         BarChart kCalBar;
         kCalBar = root.findViewById(R.id.nutrition_cKal_bar_chart);
@@ -121,14 +112,11 @@ public class NutritionFragment extends Fragment {
         return root;
     }
 
-
-
     @SuppressLint("ResourceType")
     private LineData getLineData(float targetCals) {
         double fatPerKCal = 0.033;
         double carbsPerKCal = 0.123;
         double proteinPerKCal = 0.036;
-
 
         LineData d = new LineData();
 
@@ -198,7 +186,6 @@ public class NutritionFragment extends Fragment {
         nutrientsTarget.add(proteinPerKCal*targetCals);
         nutrientsTarget.add(carbsPerKCal*targetCals);
 
-
         List<NutrientsData> nutrients = user.getNutrition();
         NutrientsData last_nutrients = nutrients.get(nutrients.size()-1);
 
@@ -223,8 +210,6 @@ public class NutritionFragment extends Fragment {
         return d;
     }
 
-
-
     private static class MyBarDataSet extends BarDataSet {
         List<Double> total;
         public MyBarDataSet(List<BarEntry> yVals, String label, List<Double> total) {
@@ -235,15 +220,11 @@ public class NutritionFragment extends Fragment {
         @Override
         public int getColor(int index) {
             if (getEntryForIndex(index).getY() < total.get(index)*1.1 && getEntryForIndex(index).getY() > total.get(index)*0.9){
-                double test1 = total.get(index);
-                Double test2 = total.get(index)*1.1;
                 return mColors.get(0);}
             else if (getEntryForIndex(index).getY() < total.get(index)*1.3 && getEntryForIndex(index).getY() > total.get(index)*0.7)
                 return mColors.get(1);
             else
                 return mColors.get(2);
-
-
         }
     }
 
