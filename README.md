@@ -26,7 +26,6 @@ We tried to identify the main problems and thought about how to display them eas
 Helsana also stated, that they want a recommendation-system which suggest the user to do certain things based on data.
 This is one of the main reason we chose to design one app for everything, because the recommendation-system would benefit from more data. That means that the app can suggest drinking more water if it finds a correlation to medical issues like headaches.
 
-### Home-Screen
 Home Screen  |  Medicine Card
 :-------------------------:|:-------------------------:
 ![home_screen](https://github.com/distrustME/START-Hack-21/blob/master/doc/mockups/01_home_screen_v2.png)  |  ![medicine_screen](https://github.com/distrustME/START-Hack-21/blob/master/doc/mockups/04_medicine_fragment.png)
