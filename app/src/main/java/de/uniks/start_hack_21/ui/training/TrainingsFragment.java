@@ -1,6 +1,7 @@
 package de.uniks.start_hack_21.ui.training;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,14 +9,27 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.util.HashMap;
+import java.util.List;
 
 import de.uniks.start_hack_21.R;
+import de.uniks.start_hack_21.data.ActivityResponse;
+import de.uniks.start_hack_21.services.ActivityService;
+import de.uniks.start_hack_21.services.ServiceBuilder;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
-public class TrainingsFragment extends Fragment {
+public class TrainingsFragment extends Fragment implements Callback<List<ActivityResponse>> {
 
     private TrainingsViewModel trainingsViewModel;
     private View root;
@@ -49,5 +63,29 @@ public class TrainingsFragment extends Fragment {
 
             trainingContainer.addView(view);
         }
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        ActivityService activityService = ServiceBuilder.retrofit.create(ActivityService.class);
+
+        // hard coded userId:
+        String testUserId = "01E8091B7D4F004EFB77FA332F662C20";
+
+        activityService.getActivities(testUserId).enqueue(this);
+
+    }
+
+    @Override
+    public void onResponse(Call<List<ActivityResponse>> call, Response<List<ActivityResponse>> response) {
+        List<ActivityResponse> activities = response.body();
+        Log.d("trainingsFragment",activities.size() + " activities found");
+    }
+
+    @Override
+    public void onFailure(Call<List<ActivityResponse>> call, Throwable t) {
+        Log.e("trainingsFragment", "error:" + t);
     }
 }
